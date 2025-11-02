@@ -20,6 +20,9 @@ const config: Config = {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite',
         'gradient': 'gradient 8s linear infinite',
+        'gradient-shift': 'gradientShift 15s ease-in-out infinite',
+        'pulse-slow': 'pulseSlow 8s ease-in-out infinite',
+        'pulse-slower': 'pulseSlower 12s ease-in-out infinite',
         'slide-up': 'slideUp 0.6s ease-out',
         'fade-in': 'fadeIn 0.8s ease-out',
       },
@@ -35,6 +38,19 @@ const config: Config = {
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        gradientShift: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(5%, -5%) scale(1.1)' },
+          '66%': { transform: 'translate(-5%, 5%) scale(0.95)' },
+        },
+        pulseSlow: {
+          '0%, 100%': { opacity: '0.2', transform: 'scale(1)' },
+          '50%': { opacity: '0.4', transform: 'scale(1.05)' },
+        },
+        pulseSlower: {
+          '0%, 100%': { opacity: '0.1', transform: 'scale(1)' },
+          '50%': { opacity: '0.3', transform: 'scale(1.08)' },
         },
         slideUp: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
